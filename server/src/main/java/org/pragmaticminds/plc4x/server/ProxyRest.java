@@ -38,29 +38,29 @@ public class ProxyRest  {
     logger.info("Proxy Rest Server was activated...");
   }
 
-//  @Reference(service = PlcDriver.class)
-//  public void addDriver(PlcDriver driver) {
-//    logger.info("Binding driver...");
-//    // Try to access S7 Driver
-//    try (final PlcConnection connect = driver.connect("s7://192.168.167.210/1/1")) {
-//      connect.connect();
-//      final PlcReadResponse response = connect.readRequestBuilder()
-//          .addItem("asdf", "%M0:UDINT")
-//          .build()
-//          .execute()
-//          .get(100, TimeUnit.MILLISECONDS);
-//
-//      logger.info("I got the response code {} and the value {} from the S7 PLC", response.getResponseCode("asdf"), response.getLong("asdf"));
-//    } catch (Exception e) {
-//      e.printStackTrace();
-//    }
-//
-//    logger.info("I got a S7 Driver now... dunno why but I have one...");
-//  }
-//
-//  public void removeDriver(PlcDriver driver) {
-//    logger.info("Unbdingind driver...");
-//  }
+  @Reference(service = PlcDriver.class)
+  public void addDriver(PlcDriver driver) {
+    logger.info("Binding driver...");
+    // Try to access S7 Driver
+    try (final PlcConnection connect = driver.connect("s7://192.168.167.210/1/1")) {
+      connect.connect();
+      final PlcReadResponse response = connect.readRequestBuilder()
+          .addItem("asdf", "%M0:UDINT")
+          .build()
+          .execute()
+          .get(100, TimeUnit.MILLISECONDS);
+
+      logger.info("I got the response code {} and the value {} from the S7 PLC", response.getResponseCode("asdf"), response.getLong("asdf"));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    logger.info("I got a S7 Driver now... dunno why but I have one...");
+  }
+
+  public void removeDriver(PlcDriver driver) {
+    logger.info("Unbdingind driver...");
+  }
 
 
   @Path("/")

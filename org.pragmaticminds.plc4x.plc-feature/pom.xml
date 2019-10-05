@@ -14,6 +14,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.serviceloader</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.plc4x</groupId>
             <artifactId>plc4j-protocol-driver-base-tcp</artifactId>
             <version>0.4.0</version>

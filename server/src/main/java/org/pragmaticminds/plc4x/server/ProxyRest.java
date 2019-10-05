@@ -1,11 +1,13 @@
 package org.pragmaticminds.plc4x.server;
 
 import org.apache.plc4x.java.api.PlcConnection;
-import org.apache.plc4x.java.api.exceptions.PlcConnectionException;
 import org.apache.plc4x.java.api.messages.PlcReadResponse;
-import org.apache.plc4x.java.s7.S7PlcDriver;
+import org.apache.plc4x.java.spi.PlcDriver;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsResource;
 import org.slf4j.Logger;
 
@@ -33,24 +35,32 @@ public class ProxyRest  {
 
   @Activate
   public void activate() {
-    // Try to access S7 Driver
-    final S7PlcDriver s7PlcDriver = new S7PlcDriver();
-    try (final PlcConnection connect = s7PlcDriver.connect("s7://192.168.167.210/1/1")) {
-      final PlcReadResponse response = connect.readRequestBuilder()
-          .addItem("asdf", "%M0:UDINT")
-          .build()
-          .execute()
-          .get(100, TimeUnit.MILLISECONDS);
-
-      logger.info("I got the response {}", response);
-    } catch (PlcConnectionException e) {
-      e.printStackTrace();
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
-    logger.info("I got a S7 Driver now... dunno why but I have one...");
+    logger.info("Proxy Rest Server was activated...");
   }
+
+//  @Reference(service = PlcDriver.class)
+//  public void addDriver(PlcDriver driver) {
+//    logger.info("Binding driver...");
+//    // Try to access S7 Driver
+//    try (final PlcConnection connect = driver.connect("s7://192.168.167.210/1/1")) {
+//      connect.connect();
+//      final PlcReadResponse response = connect.readRequestBuilder()
+//          .addItem("asdf", "%M0:UDINT")
+//          .build()
+//          .execute()
+//          .get(100, TimeUnit.MILLISECONDS);
+//
+//      logger.info("I got the response code {} and the value {} from the S7 PLC", response.getResponseCode("asdf"), response.getLong("asdf"));
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
+//
+//    logger.info("I got a S7 Driver now... dunno why but I have one...");
+//  }
+//
+//  public void removeDriver(PlcDriver driver) {
+//    logger.info("Unbdingind driver...");
+//  }
 
 
   @Path("/")

@@ -26,6 +26,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.serviceloader</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.26</version>
@@ -38,17 +44,23 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.apache.plc4x</groupId>
+            <artifactId>plc4j-api</artifactId>
+            <version>0.4.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.7</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.plc4x</groupId>
-            <artifactId>plc4j-driver-s7</artifactId>
-            <version>0.4.0</version>
-            <scope>compile</scope>
-        </dependency>
+        <!--        <dependency>-->
+<!--            <groupId>org.apache.plc4x</groupId>-->
+<!--            <artifactId>plc4j-driver-s7</artifactId>-->
+<!--            <version>0.4.0</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -61,9 +73,9 @@
                 <configuration>
                     <exportScr>true</exportScr>
                     <instructions>
-                        <Embed-Dependency>*;scope=compile|runtime;inline=true</Embed-Dependency>
+                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
-                        <Import-Package>org.osgi.*,org.slf4j.*,javax.ws.rs.*</Import-Package>
+                        <Import-Package>org.osgi.*,org.slf4j.*,javax.ws.rs.*,javax.security.*,org.apache.plc4x.java.*</Import-Package>
 <!--                        <Private-Package>-->
 <!--                            org.pragmaticminds.plc4x.server-->
 <!--                        </Private-Package>-->

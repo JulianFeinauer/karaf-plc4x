@@ -13,6 +13,7 @@
         <module>server</module>
         <module>org.pragmaticminds.plc4x.feature</module>
         <module>org.pragmaticminds.plc4x.plc-feature</module>
+        <module>s7-driver</module>
     </modules>
 
     <build>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>plc-proxy</artifactId>
+        <groupId>org.pragmaticminds.plc4x</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>s7-driver</artifactId>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.plc4x</groupId>
+            <artifactId>plc4j-driver-s7</artifactId>
+            <version>0.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>4.2.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <exportScr>true</exportScr>
+                    <instructions>
+                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Import-Package>org.osgi.*,!org.slf4j.impl.*,org.slf4j.*,javax.security.*</Import-Package>
+                        <Export-Package>org.apache.plc4x.java.s7</Export-Package>
+                        <Include-Resources>src/main/resources/OSGI-INF</Include-Resources>
+<!--                        <Include-Resources>src/main/resources/OSGI-INF/org.apache.plc4x.java.s7.S7PlcDriver.xml</Include-Resources>-->
+                        <Service-Component>OSGI-INF/org.apache.plc4x.java.s7.S7PlcDriver.xml</Service-Component>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

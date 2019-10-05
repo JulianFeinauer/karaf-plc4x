@@ -75,7 +75,7 @@
                     <instructions>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
-                        <Import-Package>org.osgi.*,org.slf4j.*,javax.ws.rs.*,javax.security.*,org.apache.plc4x.java.*</Import-Package>
+                        <Import-Package>org.osgi.*,org.slf4j.*,javax.ws.rs.*,javax.security.*,org.apache.plc4x.java.s7</Import-Package>
 <!--                        <Private-Package>-->
 <!--                            org.pragmaticminds.plc4x.server-->
 <!--                        </Private-Package>-->

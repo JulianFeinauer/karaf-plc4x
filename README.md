@@ -21,6 +21,8 @@ Contains the REST Server. And also a demo to use PLC4X.
 
 ### s7-driver (deprecated)
 
+This was a (working) Approach with a handwritten DS xml and all transitive dependencies included.
+
 ### driver-s7-spi 
 
 Wrapping of the s7 driver (with two bundles packaged to avoid split package).

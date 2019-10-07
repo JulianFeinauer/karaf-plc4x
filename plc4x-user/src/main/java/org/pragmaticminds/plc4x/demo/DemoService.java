@@ -24,7 +24,7 @@ public class DemoService {
     drivers.add(driver);
     logger.info("Detected new PLC4X driver {}. Currently {} drivers are available.", driver.getProtocolName(), drivers.size());
     // Do a quick request
-    // Try to access S7 Driver
+//    // Try to access S7 Driver
 //    try (final PlcConnection connect = driver.connect("s7://192.168.167.210/1/1")) {
 //      connect.connect();
 //      final PlcReadResponse response = connect.readRequestBuilder()

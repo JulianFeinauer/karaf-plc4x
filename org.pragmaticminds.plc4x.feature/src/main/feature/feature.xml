@@ -29,7 +29,7 @@
 
     <feature name="plc4x-feature" description="plc4x-feature" version="1.0.0.SNAPSHOT">
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-iso-tp/0.4.0</bundle>
-        <!-- Cannot exist together, split package issue -->
+        <!-- The next two cannot exist together, split package issue -->
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-driver-base/0.4.0</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-driver-base-tcp/0.4.0</bundle>
         <bundle>wrap:mvn:io.netty/netty-codec/4.1.35.Final</bundle>

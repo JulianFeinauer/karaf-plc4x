@@ -24,19 +24,19 @@ public class DemoService {
     drivers.add(driver);
     logger.info("Detected new PLC4X driver {}. Currently {} drivers are available.", driver.getProtocolName(), drivers.size());
     // Do a quick request
-//    // Try to access S7 Driver
-//    try (final PlcConnection connect = driver.connect("s7://192.168.167.210/1/1")) {
-//      connect.connect();
-//      final PlcReadResponse response = connect.readRequestBuilder()
-//          .addItem("asdf", "%M0:UDINT")
-//          .build()
-//          .execute()
-//          .get(100, TimeUnit.MILLISECONDS);
-//
-//      logger.info("I got the response code {} and the value {} from the PLC", response.getResponseCode("asdf"), response.getLong("asdf"));
-//    } catch (Exception e) {
-//      logger.error("Unable to get a response from the PLC", e);
-//    }
+    // Try to access S7 Driver
+    try (final PlcConnection connect = driver.connect("s7://192.168.167.210/1/1")) {
+      connect.connect();
+      final PlcReadResponse response = connect.readRequestBuilder()
+          .addItem("asdf", "%M0:UDINT")
+          .build()
+          .execute()
+          .get(100, TimeUnit.MILLISECONDS);
+
+      logger.info("I got the response code {} and the value {} from the PLC", response.getResponseCode("asdf"), response.getLong("asdf"));
+    } catch (Exception e) {
+      logger.error("Unable to get a response from the PLC", e);
+    }
   }
 
   public void removeDriver(PlcDriver driver) {

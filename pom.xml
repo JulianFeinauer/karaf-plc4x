@@ -14,6 +14,9 @@
         <module>org.pragmaticminds.plc4x.feature</module>
         <module>org.pragmaticminds.plc4x.plc-feature</module>
         <module>s7-driver</module>
+        <module>driver-s7-spi</module>
+        <module>plc4x-api</module>
+        <module>plc4x-user</module>
     </modules>
 
     <build>

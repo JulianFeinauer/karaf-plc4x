@@ -30,18 +30,18 @@
     <feature name="plc4x-feature" description="plc4x-feature" version="1.0.0.SNAPSHOT">
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-iso-tp/0.4.0</bundle>
         <!-- The next two cannot exist together, split package issue -->
+        <bundle>mvn:io.netty/netty-codec/4.1.35.Final</bundle>
+        <bundle>mvn:io.netty/netty-transport/4.1.35.Final</bundle>
+        <bundle>mvn:io.netty/netty-resolver/4.1.35.Final</bundle>
+        <bundle>mvn:io.netty/netty-common/4.1.35.Final</bundle>
+        <bundle>mvn:io.netty/netty-buffer/4.1.35.Final</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-driver-base/0.4.0</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-driver-base-tcp/0.4.0</bundle>
-        <bundle>wrap:mvn:io.netty/netty-codec/4.1.35.Final</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-api/0.4.0</bundle>
-        <bundle>wrap:mvn:io.netty/netty-transport/4.1.35.Final</bundle>
-        <bundle>wrap:mvn:io.netty/netty-resolver/4.1.35.Final</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-driver-s7/0.4.0</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-iso-on-tcp/0.4.0</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-iso-tp/0.4.0</bundle>
         <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-s7/0.4.0</bundle>
-        <bundle>wrap:mvn:io.netty/netty-common/4.1.35.Final</bundle>
-        <bundle>wrap:mvn:io.netty/netty-buffer/4.1.35.Final</bundle>
         <bundle>wrap:mvn:org.apache.commons/commons-configuration2/2.2</bundle>
         <bundle>wrap:mvn:commons-logging/commons-logging/1.2</bundle>
         <bundle>wrap:mvn:org.apache.commons/commons-lang3/3.7</bundle>

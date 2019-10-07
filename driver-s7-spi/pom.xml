@@ -25,6 +25,32 @@
             <version>0.4.0</version>
             <scope>compile</scope>
         </dependency>
+<!--        &lt;!&ndash; Test to see if its a netty CL problem &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-buffer</artifactId>-->
+<!--            <version>4.1.35.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-common</artifactId>-->
+<!--            <version>4.1.35.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-codec</artifactId>-->
+<!--            <version>4.1.35.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-transport</artifactId>-->
+<!--            <version>4.1.35.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.netty</groupId>-->
+<!--            <artifactId>netty-resolver</artifactId>-->
+<!--            <version>4.1.35.Final</version>-->
+<!--        </dependency>-->
         <!-- The following is necessary due to split package issue -->
         <dependency>
             <groupId>org.apache.plc4x</groupId>
@@ -57,6 +83,24 @@
                     <instructions>
                         <Import-Package>
                             *
+<!--                            org.apache.commons.configuration2-->
+<!--                            ;version="[2.2,3)",org.apache.commons.lang3;version="[3.7,4)",org.apach-->
+<!--                            e.commons.lang3.reflect;version="[3.7,4)",org.apache.commons.lang3.tupl-->
+<!--                            e;version="[3.7,4)",org.apache.plc4x.java.api;version="[0.4,1)",org.apa-->
+<!--                            che.plc4x.java.api.authentication;version="[0.4,1)",org.apache.plc4x.ja-->
+<!--                            va.api.exceptions;version="[0.4,1)",org.apache.plc4x.java.api.messages;-->
+<!--                            version="[0.4,1)",org.apache.plc4x.java.api.metadata;version="[0.4,1)",-->
+<!--                            org.apache.plc4x.java.api.model;version="[0.4,1)",org.apache.plc4x.java-->
+<!--                            .api.types;version="[0.4,1)",org.apache.plc4x.java.isoontcp.protocol;ve-->
+<!--                            rsion="[0.4,1)",org.apache.plc4x.java.isotp.protocol;version="[0.4,1)",-->
+<!--                            org.apache.plc4x.java.isotp.protocol.model.tpdus;version="[0.4,1)",org.-->
+<!--                            apache.plc4x.java.isotp.protocol.model.types;version="[0.4,1)",org.apac-->
+<!--                            he.plc4x.java.s7.model;version="[0.4,1)",org.apache.plc4x.java.s7.netty-->
+<!--                            ;version="[0.4,1)",org.apache.plc4x.java.s7.netty.strategies;version="[-->
+<!--                            0.4,1)",org.apache.plc4x.java.s7.netty.util;version="[0.4,1)",org.apach-->
+<!--                            e.plc4x.java.s7.types;version="[0.4,1)",org.apache.plc4x.java.s7.utils;-->
+<!--                            version="[0.4,1)",org.apache.plc4x.java.spi;version="[0.4,1)",org.slf4j-->
+<!--                            ;version="[1.7,2)",javax.security.*-->
                         </Import-Package>
                         <Export-Package/>
                         <_exportcontents/>

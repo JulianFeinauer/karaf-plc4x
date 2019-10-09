@@ -33,11 +33,11 @@
         <bundle>mvn:io.netty/netty-resolver/4.1.35.Final</bundle>
         <bundle>mvn:io.netty/netty-common/4.1.35.Final</bundle>
         <bundle>mvn:io.netty/netty-buffer/4.1.35.Final</bundle>
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-api/0.4.0</bundle>
-        <bundle>wrap:mvn:org.apache.commons/commons-configuration2/2.2</bundle>
-        <bundle>wrap:mvn:commons-logging/commons-logging/1.2</bundle>
-        <bundle>wrap:mvn:org.apache.commons/commons-lang3/3.7</bundle>
-        <bundle>wrap:mvn:commons-io/commons-io/2.6</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-api/0.4.0</bundle>
+        <bundle>mvn:org.apache.commons/commons-configuration2/2.2</bundle>
+        <bundle>mvn:commons-logging/commons-logging/1.2</bundle>
+        <bundle>mvn:org.apache.commons/commons-lang3/3.7</bundle>
+        <bundle>mvn:commons-io/commons-io/2.6</bundle>
     </feature>
 
     <feature name="plc4x-consumer-example" description="plc4x consumer example" version="1.0.0.SNAPSHOT">
@@ -51,13 +51,13 @@
         <feature>plc4x-feature</feature>
         <!-- The next two cannot exist together, split package issue -->
         <!-- But they need to be here for correct resolution of inputs / exports -->
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-driver-base/0.4.0</bundle>
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-driver-base-tcp/0.4.0</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-protocol-driver-base/0.4.0</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-protocol-driver-base-tcp/0.4.0</bundle>
         <!-- S7 Specific part, is not used from here but has to be here for Imports / Exports resolution-->
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-driver-s7/0.4.0</bundle>
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-iso-on-tcp/0.4.0</bundle>
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-iso-tp/0.4.0</bundle>
-        <bundle>wrap:mvn:org.apache.plc4x/plc4j-protocol-s7/0.4.0</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-driver-s7/0.4.0</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-protocol-iso-on-tcp/0.4.0</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-protocol-iso-tp/0.4.0</bundle>
+        <bundle>mvn:org.apache.plc4x/plc4j-protocol-s7/0.4.0</bundle>
         <!-- End of S7 Specific part -->
         <bundle>mvn:org.apache.aries.spifly/org.apache.aries.spifly.static.bundle/1.2.3</bundle>
         <bundle>mvn:org.pragmaticminds.plc4x/driver-s7-spi/1.0.0-SNAPSHOT</bundle>

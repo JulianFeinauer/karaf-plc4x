@@ -31,8 +31,8 @@
                 <configuration>
                     <exportScr>true</exportScr>
                     <instructions>
-                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
-                        <Embed-Transitive>true</Embed-Transitive>
+<!--                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>-->
+<!--                        <Embed-Transitive>true</Embed-Transitive>-->
                         <Import-Package>org.osgi.*,!org.slf4j.impl.*,org.slf4j.*,javax.security.*</Import-Package>
                         <Export-Package>org.apache.plc4x.java.s7</Export-Package>
                         <Include-Resources>src/main/resources/OSGI-INF</Include-Resources>
